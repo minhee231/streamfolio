@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About | Streamfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #131313;
+            color: #e5e2e1;
+            margin: 0;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        /* Custom scrollbar for a cinematic feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #603e39;
+        }
+        .sidebar-active-pill {
+            background-color: #353534;
+            font-weight: 700;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#002f67",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "inverse-primary": "#c00100",
+                        "tertiary-fixed-dim": "#acc7ff",
+                        "on-secondary-fixed": "#001d35",
+                        "on-primary-container": "#5c0000",
+                        "background": "#131313",
+                        "surface": "#131313",
+                        "outline": "#b18780",
+                        "surface-dim": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed": "#ffdad4",
+                        "on-surface-variant": "#ebbbb4",
+                        "on-surface": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#930100",
+                        "on-secondary-container": "#002b4c",
+                        "tertiary-container": "#488fff",
+                        "on-secondary": "#003257",
+                        "secondary-fixed-dim": "#9ccaff",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#00497b",
+                        "surface-variant": "#353534",
+                        "surface-bright": "#3a3939",
+                        "secondary-fixed": "#d0e4ff",
+                        "error": "#ffb4ab",
+                        "primary": "#ffb4a8",
+                        "surface-tint": "#ffb4a8",
+                        "surface-container": "#201f1f",
+                        "outline-variant": "#603e39",
+                        "on-tertiary-fixed-variant": "#004491",
+                        "tertiary-fixed": "#d7e2ff",
+                        "secondary-container": "#2295ed",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed": "#410000",
+                        "primary-container": "#ff5540",
+                        "on-primary": "#690100",
+                        "on-tertiary-fixed": "#001a40",
+                        "on-background": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-highest": "#353534",
+                        "tertiary": "#acc7ff",
+                        "error-container": "#93000a",
+                        "secondary": "#9ccaff",
+                        "on-tertiary-container": "#00285b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "sidebar-width": "240px",
+                        "gutter": "16px",
+                        "sidebar-collapsed-width": "72px",
+                        "container-max": "1280px",
+                        "margin-desktop": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+                        "headline-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["18px", {"lineHeight": "26px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 h-14 bg-background">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</button>
+<div class="text-headline-lg font-headline-lg font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span>Streamfolio</span>
+</div>
+</div>
+<div class="hidden md:flex flex-1 max-w-2xl mx-8">
+<div class="relative w-full flex items-center bg-surface-container-low rounded-full px-4 border border-outline-variant focus-within:border-primary transition-all">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-full px-3 py-2 text-on-surface" placeholder="Search projects..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors md:flex hidden">
+<span class="material-symbols-outlined">video_call</span>
+</button>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors md:flex hidden">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden ml-2 cursor-pointer border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a creative director in a high-contrast cinematic setting. The lighting is dramatic, with deep shadows and sharp red highlights reflecting the brand's aesthetic. The subject wears dark, modern attire, looking directly at the camera with a focused and utilitarian expression. The background is a blurred studio environment with hints of high-end media equipment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGqkSS04aQmJpM05ih6C7tz-5MBKXr9JyBK2B3z0rPvIWlR-nkJOsR6FfKiLanJOWTqKoKWCB-usBRQkcijVVWifvNWI-xacUuAhvsqNzC3e4feFdlNNGjvOY2TFbG0NsDzvVy1AnLlgCHjR3JxaiFWvce6r3_hf1khSETaNmKR90Df7CEgibewVWCGbG9Fbmg2EpwdaAYUdphQ_blnMQlpCacjdHuYPpHfidEQ_0VEwDxSCMnOIkHvT8IHF9brdPep3QdT6g-5qHC"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-14 h-[calc(100vh-56px)] w-sidebar-width hidden md:flex flex-col p-2 overflow-y-auto bg-background">
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">home</span>
+<span class="text-label-md font-label-md">Home</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">video_library</span>
+<span class="text-label-md font-label-md">Projects</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">description</span>
+<span class="text-label-md font-label-md">Resume</span>
+</a>
+<a class="flex items-center gap-4 bg-surface-container-highest text-on-surface font-bold rounded-lg px-3 py-2 scale-95 transition-transform duration-100" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-label-md font-label-md">About</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">mail</span>
+<span class="text-label-md font-label-md">Contact</span>
+</a>
+</nav>
+<hr class="my-4 border-outline-variant opacity-20"/>
+<div class="px-3 mb-2">
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Subscriptions</p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-4 px-3 py-2 hover:bg-surface-container rounded-lg cursor-pointer">
+<div class="w-6 h-6 rounded-full bg-primary-container"></div>
+<span class="text-label-md font-label-md truncate">Adobe Creative</span>
+</div>
+<div class="flex items-center gap-4 px-3 py-2 hover:bg-surface-container rounded-lg cursor-pointer">
+<div class="w-6 h-6 rounded-full bg-secondary-container"></div>
+<span class="text-label-md font-label-md truncate">Figma Design</span>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="md:ml-sidebar-width mt-14 min-h-[calc(100vh-56px)] flex flex-col">
+<!-- Channel Banner -->
+<div class="relative w-full aspect-[21/9] md:aspect-[6/1] overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="A wide-angle cinematic banner showcasing a high-tech creative workspace. The scene features multiple 16:9 ultra-wide monitors displaying complex video editing timelines and motion graphics in a dark room. Deep blacks and vibrant red accent lighting from LED strips create a dramatic, professional atmosphere. Minimalist furniture and sleek textures are highlighted by subtle tonal layering and a pristine white ambient glow." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCofDd5TQ8RpbVEJqXXWkZ5RhMV05b2MFD3EV3bBjuHxWtWPK624JsuzHKQ6OiDUXJCOpabyU4xvTt9b0ETHT9MZCfhjsqPlBEuaEFf0XpEkc6PlMC7g0T-b3PccMYSjDhQigpWeaKUqIwDPdnqIQUzYD83qqFWETMiu0fm97HblYLKS7b9WHhZ_h9r-U4xVrSF9EcABKGhikFA8dlrOcfGj2khgjaJWexKUHywKSv9Cw3Xcy6c-uclP08AuQBJW-A0j6PCH9YrfwHD')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-40"></div>
+</div>
+<!-- Channel Header Info -->
+<section class="max-w-container-max mx-auto w-full px-4 md:px-8 py-6">
+<div class="flex flex-col md:flex-row gap-6 md:items-start">
+<!-- Profile Pic -->
+<div class="w-24 h-24 md:w-40 md:h-40 rounded-full border-4 border-background overflow-hidden -mt-12 md:-mt-16 z-10 shadow-xl bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Detailed portrait of a senior creative professional with a modern cinematic aesthetic. The lighting features high-contrast rim light in vibrant red against a deep black background. The subject is dressed in a sleek, minimalist black turtleneck, projecting an air of technical expertise and creative authority. The image quality is crisp with a shallow depth of field, emphasizing the subject's direct and confident gaze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3o5O_f1F9cM2Yk0FCfOd9vLTojkLEWSYt6phoK2943PrPEsRQ3xq5zu2ZAMo8vhC4t1gpey1YpzJEG-_rsjBAp1CzBGY-otU7evEr82nrezuuFN5I9rtqtgsIfFHXeflKVOrAQhglwuslovo06OhgscCRYL_2OobgPiLJbtjr_XQpKyxVyF-OAJu0SUMJ3dhB3z0gSOL0bZM62J1nUl9tYPGia0hqNA4rRC3L-7CJbY4Vv9SFm0P6ErwV7EVcg-BLi64FZafL6do-"/>
+</div>
+<!-- Info Cluster -->
+<div class="flex-1">
+<h1 class="text-headline-xl font-headline-xl text-on-surface">Creative Director</h1>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1 text-on-surface-variant text-body-md">
+<span>@streamfolio_design</span>
+<span class="hidden md:inline">•</span>
+<span>128K views</span>
+<span class="hidden md:inline">•</span>
+<span>Joined Oct 2018</span>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+<button class="bg-on-surface text-background font-bold px-6 py-2 rounded-full hover:opacity-90 transition-opacity text-label-md">
+                            Collaborate
+                        </button>
+<button class="bg-surface-container-high text-on-surface font-bold px-6 py-2 rounded-full hover:bg-surface-container-highest transition-colors text-label-md">
+                            View Portfolio
+                        </button>
+</div>
+</div>
+</div>
+<!-- Tab Navigation -->
+<div class="mt-8 border-b border-outline-variant flex gap-8 overflow-x-auto scrollbar-hide">
+<a class="pb-3 text-on-surface-variant hover:text-on-surface text-label-md font-label-md transition-colors whitespace-nowrap" href="#">HOME</a>
+<a class="pb-3 text-on-surface-variant hover:text-on-surface text-label-md font-label-md transition-colors whitespace-nowrap" href="#">PROJECTS</a>
+<a class="pb-3 text-on-surface-variant hover:text-on-surface text-label-md font-label-md transition-colors whitespace-nowrap" href="#">REEL</a>
+<a class="pb-3 border-b-2 border-on-surface text-on-surface font-bold text-label-md font-label-md transition-colors whitespace-nowrap" href="#">ABOUT</a>
+</div>
+</section>
+<!-- About Content Grid -->
+<section class="max-w-container-max mx-auto w-full px-4 md:px-8 py-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Bio & Details (Left 2 Columns) -->
+<div class="lg:col-span-2 space-y-12">
+<!-- Biography -->
+<article>
+<h2 class="text-headline-lg font-headline-lg mb-4">Description</h2>
+<p class="text-on-surface-variant text-body-md leading-relaxed whitespace-pre-line">
+                        Award-winning Creative Director specializing in cinematic digital experiences and high-impact visual storytelling. With over a decade of experience, I bridge the gap between technical execution and artistic vision.
+
+                        My work is characterized by a "content-first" philosophy, utilizing deep tonal layering and high-contrast aesthetics to create immersive environments. I've led cross-functional teams for global brands, delivering media-rich dashboards, professional portfolios, and interactive entertainment platforms.
+
+                        Focus areas:
+                        • UI/UX Motion Graphics
+                        • Cinematic Web Experiences
+                        • Brand Identity for Digital Platforms
+                        • Advanced Interaction Design
+                    </p>
+</article>
+<!-- Experience Metrics (Bento Style) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-surface-container-low p-6 rounded-xl border border-white/5 flex flex-col items-center justify-center text-center">
+<span class="text-headline-xl font-headline-xl text-primary-container">12+</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase mt-1">Years Exp</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border border-white/5 flex flex-col items-center justify-center text-center">
+<span class="text-headline-xl font-headline-xl text-on-surface">240</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase mt-1">Projects</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border border-white/5 flex flex-col items-center justify-center text-center">
+<span class="text-headline-xl font-headline-xl text-on-surface">15</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase mt-1">Awards</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border border-white/5 flex flex-col items-center justify-center text-center">
+<span class="text-headline-xl font-headline-xl text-on-surface">8M</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase mt-1">Reach</span>
+</div>
+</div>
+<!-- Recognition Section (Channel Awards Style) -->
+<section>
+<h2 class="text-headline-lg font-headline-lg mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container">emoji_events</span>
+                        Recognition
+                    </h2>
+<div class="space-y-4">
+<div class="flex gap-4 p-4 rounded-xl hover:bg-surface-container transition-colors group border border-transparent hover:border-outline-variant/20">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-full text-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">Awwwards SOTD (2023)</h3>
+<p class="text-body-sm text-on-surface-variant">Awarded for the 'Cinematic Hub' interactive dashboard experience.</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-xl hover:bg-surface-container transition-colors group border border-transparent hover:border-outline-variant/20">
+<div class="w-12 h-12 bg-secondary-container/10 flex items-center justify-center rounded-full text-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">Webby Award Nominee (2022)</h3>
+<p class="text-body-sm text-on-surface-variant">Nominated for Best Visual Design - Aesthetic in the Portfolio category.</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-xl hover:bg-surface-container transition-colors group border border-transparent hover:border-outline-variant/20">
+<div class="w-12 h-12 bg-on-surface-variant/10 flex items-center justify-center rounded-full text-on-surface-variant">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">Fast Company - World Changing Ideas</h3>
+<p class="text-body-sm text-on-surface-variant">Honorable mention for accessibility-first creative interfaces.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Stats & Links (Right Column) -->
+<aside class="space-y-12">
+<!-- Stats -->
+<section>
+<h2 class="text-headline-lg font-headline-lg mb-4">Stats</h2>
+<div class="space-y-4 border-t border-b border-outline-variant/20 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">public</span>
+<span class="text-body-md text-on-surface">Global Distribution</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">info</span>
+<span class="text-body-md text-on-surface">Verified Identity</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">trending_up</span>
+<span class="text-body-md text-on-surface">Top 1% Creator</span>
+</div>
+</div>
+<button class="mt-4 w-full p-2 text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined">flag</span>
+</button>
+</section>
+<!-- Links -->
+<section>
+<h2 class="text-headline-lg font-headline-lg mb-4">Links</h2>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 text-secondary hover:underline text-body-md" href="#">
+<span class="material-symbols-outlined text-body-sm">link</span>
+                            Professional Portfolio
+                        </a>
+<a class="flex items-center gap-3 text-secondary hover:underline text-body-md" href="#">
+<span class="material-symbols-outlined text-body-sm">link</span>
+                            LinkedIn Profile
+                        </a>
+<a class="flex items-center gap-3 text-secondary hover:underline text-body-md" href="#">
+<span class="material-symbols-outlined text-body-sm">link</span>
+                            Twitter / X
+                        </a>
+<a class="flex items-center gap-3 text-secondary hover:underline text-body-md" href="#">
+<span class="material-symbols-outlined text-body-sm">link</span>
+                            Behance Showcase
+                        </a>
+<a class="flex items-center gap-3 text-secondary hover:underline text-body-md" href="#">
+<span class="material-symbols-outlined text-body-sm">link</span>
+                            Dribbble Shots
+                        </a>
+</div>
+</section>
+</aside>
+</section>
+<!-- Footer -->
+<footer class="mt-auto bg-background border-t border-outline-variant dark:border-outline-variant">
+<div class="w-full py-6 px-4 flex flex-wrap gap-4 justify-start max-w-container-max mx-auto">
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">About</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Press</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Copyright</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact us</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Creators</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Advertise</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Developers</a>
+<div class="w-full text-label-sm font-label-sm text-on-surface-variant mt-2">
+                    © 2024 Portfolio Stream. All rights reserved.
+                </div>
+</div>
+</footer>
+</main>
+<!-- Mobile Nav Bar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-background border-t border-outline-variant flex justify-around py-2 z-50">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-medium">Explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[10px] font-bold">About</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">subscriptions</span>
+<span class="text-[10px] font-medium">Subs</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">video_library</span>
+<span class="text-[10px] font-medium">Library</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction: Active state scaling on navigation links
+        document.querySelectorAll('aside nav a, .md\\:hidden a').forEach(link => {
+            link.addEventListener('mousedown', () => {
+                link.classList.add('scale-95');
+            });
+            link.addEventListener('mouseup', () => {
+                link.classList.remove('scale-95');
+            });
+            link.addEventListener('mouseleave', () => {
+                link.classList.remove('scale-95');
+            });
+        });
+
+        // Hover animation for recognition cards
+        document.querySelectorAll('.recognition-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateX(8px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateX(0)';
+            });
+        });
+    </script>
+</body></html>

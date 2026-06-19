@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Streamfolio | Project Explore</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F0F0F; /* Level 0 Canvas */
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Scrollbar for YouTube-like feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3F3F3F;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #717171;
+        }
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#002f67",
+                      "primary-fixed-dim": "#ffb4a8",
+                      "inverse-primary": "#c00100",
+                      "tertiary-fixed-dim": "#acc7ff",
+                      "on-secondary-fixed": "#001d35",
+                      "on-primary-container": "#5c0000",
+                      "background": "#131313",
+                      "surface": "#131313",
+                      "outline": "#b18780",
+                      "surface-dim": "#131313",
+                      "surface-container-high": "#2a2a2a",
+                      "primary-fixed": "#ffdad4",
+                      "on-surface-variant": "#ebbbb4",
+                      "on-surface": "#e5e2e1",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#930100",
+                      "on-secondary-container": "#002b4c",
+                      "tertiary-container": "#488fff",
+                      "on-secondary": "#003257",
+                      "secondary-fixed-dim": "#9ccaff",
+                      "on-error": "#690005",
+                      "on-secondary-fixed-variant": "#00497b",
+                      "surface-variant": "#353534",
+                      "surface-bright": "#3a3939",
+                      "secondary-fixed": "#d0e4ff",
+                      "error": "#ffb4ab",
+                      "primary": "#ffb4a8",
+                      "surface-tint": "#ffb4a8",
+                      "surface-container": "#201f1f",
+                      "outline-variant": "#603e39",
+                      "on-tertiary-fixed-variant": "#004491",
+                      "tertiary-fixed": "#d7e2ff",
+                      "secondary-container": "#2295ed",
+                      "surface-container-low": "#1c1b1b",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-primary-fixed": "#410000",
+                      "primary-container": "#ff5540",
+                      "on-primary": "#690100",
+                      "on-tertiary-fixed": "#001a40",
+                      "on-background": "#e5e2e1",
+                      "inverse-surface": "#e5e2e1",
+                      "inverse-on-surface": "#313030",
+                      "surface-container-highest": "#353534",
+                      "tertiary": "#acc7ff",
+                      "error-container": "#93000a",
+                      "secondary": "#9ccaff",
+                      "on-tertiary-container": "#00285b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "sidebar-width": "240px",
+                      "gutter": "16px",
+                      "sidebar-collapsed-width": "72px",
+                      "container-max": "1280px",
+                      "margin-desktop": "24px"
+              },
+              "fontFamily": {
+                      "headline-xl": ["Inter"],
+                      "body-md": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "label-md": ["Inter"],
+                      "headline-lg-mobile": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-xl": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+                      "headline-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["18px", {"lineHeight": "26px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface select-none">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 h-14 bg-background">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors text-on-surface">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="text-headline-lg font-headline-lg font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-primary scale-125" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                Streamfolio
+            </div>
+</div>
+<div class="hidden md:flex items-center flex-1 max-w-2xl px-8">
+<div class="flex w-full">
+<div class="flex flex-1 items-center bg-surface-container border border-outline-variant rounded-l-full px-4 h-10 focus-within:border-primary-container">
+<span class="material-symbols-outlined text-on-surface-variant mr-3" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-body-md placeholder-on-surface-variant" placeholder="Search projects" type="text"/>
+</div>
+<button class="bg-surface-container-high border-y border-r border-outline-variant px-5 rounded-r-full hover:bg-surface-container-highest transition-colors h-10">
+<span class="material-symbols-outlined text-on-surface" data-icon="search">search</span>
+</button>
+</div>
+<button class="ml-4 p-2 bg-surface-container-low hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="mic">mic</span>
+</button>
+</div>
+<div class="flex items-center gap-2 md:gap-4">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors hidden sm:flex">
+<span class="material-symbols-outlined" data-icon="video_call">video_call</span>
+</button>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden ml-2 ring-1 ring-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a creative director with short dark hair and a neutral expression, photographed in a high-contrast studio setting with deep cinematic shadows. The lighting is dramatic and moody, reflecting a modern entertainment brand aesthetic with subtle red light reflections on the edges of the silhouette. The overall mood is serious and utilitarian." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpY5j4dB03JWjlDh0ws3AF56JbqFM0z-tREdQMyOig6vwExcVsrMaoInfrye_ma7TPsWXlTsH0LYTRBnHTxVBBew3mqqP-1mM9KGoyA0YhzuwKZ3pMnV5SewQoGp1D4ZCc3zmeCP-KjPjLP_33dy94a8ob5YaUfdLpMffvo16mg6Q90b3g48Vjfs7mTs7mDTiLPBT5-TSdji_ytw7ZFL4Cv-tbWN9321E5F_PFaoLdf1Jw29a082D6hJBL922Yc6AVe7Mq2YHBJ-Ov"/>
+</div>
+</div>
+</header>
+<!-- Sidebar Navigation -->
+<nav class="fixed left-0 top-14 h-[calc(100vh-56px)] w-sidebar-width hidden lg:flex flex-col p-2 overflow-y-auto">
+<div class="space-y-1">
+<a class="flex items-center gap-4 bg-surface-container-highest text-on-surface font-bold rounded-lg px-3 py-2 scale-95 transition-transform duration-100" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-md">Home</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="video_library">video_library</span>
+<span class="text-label-md">Projects</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="subscriptions">subscriptions</span>
+<span class="text-label-md">Creators</span>
+</a>
+</div>
+<div class="my-3 border-t border-outline-variant mx-3"></div>
+<div class="space-y-1">
+<div class="px-3 py-2 text-label-md font-bold text-on-surface">You</div>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-label-md">History</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="playlist_play">playlist_play</span>
+<span class="text-label-md">Saved Work</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="text-label-md">Resume</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-14 lg:pl-sidebar-width min-h-screen">
+<!-- Filter Bar -->
+<div class="sticky top-14 z-40 bg-background/95 backdrop-blur-md px-4 py-3 flex gap-3 overflow-x-auto no-scrollbar">
+<button class="px-3 py-1.5 bg-on-surface text-background font-label-md text-label-md rounded-lg whitespace-nowrap">All</button>
+<button class="px-3 py-1.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md rounded-lg transition-colors whitespace-nowrap">React</button>
+<button class="px-3 py-1.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md rounded-lg transition-colors whitespace-nowrap">Node.js</button>
+<button class="px-3 py-1.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md rounded-lg transition-colors whitespace-nowrap">Next.js</button>
+<button class="px-3 py-1.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md rounded-lg transition-colors whitespace-nowrap">Tailwind CSS</button>
+<button class="px-3 py-1.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md rounded-lg transition-colors whitespace-nowrap">UI/UX Design</button>
+<button class="px-3 py-1.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md rounded-lg transition-colors whitespace-nowrap">Web3</button>
+<button class="px-3 py-1.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md rounded-lg transition-colors whitespace-nowrap">Motion Graphics</button>
+<button class="px-3 py-1.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md rounded-lg transition-colors whitespace-nowrap">E-commerce</button>
+<button class="px-3 py-1.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md rounded-lg transition-colors whitespace-nowrap">Dashboards</button>
+</div>
+<!-- Project Grid -->
+<div class="p-4 md:p-6 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-x-4 gap-y-10">
+<!-- Project Card 1 (Main Featured) -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-fidelity project thumbnail showing a cinematic dashboard interface for a space exploration app. The UI is dark with glowing neon cyan accents, featuring intricate data visualizations and planet renders. The lighting is atmospheric and futuristic, emphasizing depth through subtle glows and sharp geometric lines against a pitch-black cosmic background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-414he3-SzOcqhukPulrOEWVdrlr_uVpcDB9XrSeB0hJgWUD6-JBjkderQ53af5A1HoKe1cO2uvfnz1N66dgAm_4eekLjblcBHISJ2KvsPyn4-s4ONUAXTHUE1c05gYOonjZkMBQwYnkfLFFkiSqBWXJ3BytKoqgSZmnJCfcg9g4Sz4nd9_KiXdUsvOBqwTA1CssEq_GUIw73v7dos3b9HenrJpzh3Co4K17sOqkryxR9piQyl4paie0VR34UeSdnKDo5_6hw0IWM"/>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 text-white text-[12px] font-bold rounded">12:45</div>
+</div>
+<div class="flex gap-3">
+<div class="flex-shrink-0 w-9 h-9 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Circular avatar of a digital artist, showing a stylized 3D character with vibrant red hair and tech-wear gear. The style is semi-realistic with smooth textures and high-contrast studio lighting, fitting a premium digital art platform aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClJNRc6Em7DRaOFpwqdf8JBNfpeNoNVi2cH5NqfzIA4pyFNzPcJstMXEWL4nVEr5Cc2ItoJv-ahu_ynjXXRMqd_HiZwS9RNWNW-_zbaUmH-n-IUop6TUUG0DMOSvE_NghSx9zBtE1LqrIYstL7NU5Ed-hxCDusZ_tng5XLMn9-15eSelQ4gIIteZ16bqsHNePlxkUDGOLcOPYU55HBS7iD2WRHnq-Qhsk2hnK7SUBN4I3skisMe0LDSsePP3lECY5nKI9A7ctoFrlz"/>
+</div>
+<div class="flex flex-col pr-6">
+<h3 class="text-on-surface font-bold text-body-md line-clamp-2 leading-tight mb-1 group-hover:text-primary transition-colors">Nebula OS: Building a Galactic Management Interface from Scratch</h3>
+<p class="text-on-surface-variant text-body-sm">Creative Director • 45k views</p>
+<div class="flex gap-2 mt-1">
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">React</span>
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">Three.js</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A cinematic thumbnail image for a mobile e-commerce project. The shot features a high-end sneaker suspended in mid-air with dynamic splash effects and professional studio lighting. The background is a minimalist gradient of deep grays, and the overall composition is clean and focused, highlighting premium product design and rapid scannability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClKwr_3Bzq_ghuX-XV0EFfz7s3tVwdI6CSFdC9HOyUokuFJ-J3hxhoHHPBAUaRDHet6NZqUPYZhH3_89kCRPsf_fstpdGx9h95wPOGN7IUrGYyaHmLAE78mb7swHdWCXREXOrV3sezO99dKde97lRruWWAyHaZa4DgjLCdqcNl1p8dCzOXlpoIknXxfFKN8oVLo6fGWIVKD1WdkFqzyvE-1uRKuGychc75sTYU2KBWU7682gZuoncLk3jbVOYvtl5U2kVrqPWF9eNy"/>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 text-white text-[12px] font-bold rounded">08:20</div>
+<div class="absolute inset-x-0 bottom-0 h-1 bg-primary/30">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="flex-shrink-0 w-9 h-9 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Profile icon for a lead developer, featuring a minimalist vector illustration of a person with glasses against a solid vibrant red background. The style is flat, corporate modern, and highly recognizable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKCM6fRkgbvw94gssSz1Cvic7cF43Px8nKbg0d7DmoUpR5WugBnu2PKLwckv3FfheD_WbydIWs3yoGpqCf40i5nM2zet_ZH_8xU3uLF4NKlE33hvUabxl4peioS1JGnQnlYUcW6WZoyZm1SC0Pkb2JfakVpAyVb24jcrJ4T35i33c2zQGibNAIPsstTAUSseKxzsHMGkN87wcAtXscFYVL6J7UtPUv5x_iQRPEr3QW1z154K_LYbvqq6ovLSRkFOZ14hGvXIOiTKX0"/>
+</div>
+<div class="flex flex-col pr-6">
+<h3 class="text-on-surface font-bold text-body-md line-clamp-2 leading-tight mb-1 group-hover:text-primary transition-colors">Soleify - High Performance Commerce with Next.js 14</h3>
+<p class="text-on-surface-variant text-body-sm">Lead Dev • 12k views</p>
+<div class="flex gap-2 mt-1">
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">Next.js</span>
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">Stripe</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Detailed UI card for a crypto dashboard project. The image shows a dark mode interface with vibrant green and red candlestick charts, flowing glassmorphism panels, and elegant typography. The atmosphere is professional, data-rich, and high-tech, using a deep black canvas punctuated by functional color accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzUwi_EMsDD144JxLaE0-u2kbNofnCqaTG44h1Zk9L7fWTCuCzaNWSl6ut-qAVHdJwgZ0REUDZQR7TioXsmctmpCTPqQpxXbwGmK-9mNOYgwRmoSR_Vgeo5ECqCMo_BsRPX0a-COwNUtzfcmaOR8jjyhZo5UxB6d7dMzZKsP0bdu0QAdWOcuzilYAFqdN3cRUI3Nqj9cV3YWjBWoBzMeEB9bwVZCwtNOJBvcvr4x7YIjQIz95yICiSH8w7RKQgSrTvmF2GkPw9coGZ"/>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 text-white text-[12px] font-bold rounded">15:10</div>
+</div>
+<div class="flex gap-3">
+<div class="flex-shrink-0 w-9 h-9 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="A portrait of a UI designer in a dimly lit workspace, illuminated only by the glow of multiple monitors. The lighting is cinematic with deep shadows and soft rim lights in shades of red and white, conveying a sense of deep focus and expert craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8njTCybgiYfTjGLm6p2Y22HhIzdnnRmckY7jITPmVYv6xIRXFPua5Ao8XQYATJb_FDTe5-Dm0OQn6VM1WWAgL_-iqvQ98ifIfbClV_6vvPFHd3X4-jAG2xKdYfsGtOYOcHRh4KLqbwklQxhCbigQSe0fnKqxFunxYJSKMejRAxId3INsJTFYwZxYg4jtngeoSiYh4r1nMcqvOfS5B14eacuKKEnXJgkfpjSXylMAJPJ0vtSrS1bPEiXNNYJ9Qhfnz4174BZ7JPwNS"/>
+</div>
+<div class="flex flex-col pr-6">
+<h3 class="text-on-surface font-bold text-body-md line-clamp-2 leading-tight mb-1 group-hover:text-primary transition-colors">Quantum Ledger: Redefining the Crypto Dashboard Experience</h3>
+<p class="text-on-surface-variant text-body-sm">Studio Alpha • 8k views</p>
+<div class="flex gap-2 mt-1">
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">Framer</span>
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">Web3</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project Card 4 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-end architectural visualization project thumbnail. The image features a modern glass villa at sunset with warm internal lights contrasting against a cool purple and orange sky. The reflection in the surrounding pool is crisp and realistic, showcasing high-level motion and rendering skills in a professional cinematic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-VFyX1f8p7ceda4Qh9Av-ugw7txSX2d1hjiaxBtUBRAgrAQbDwdbo9X8Axo8KfURl4DwOtvKKh15zOm03xX_OkQrl6QfGLNU2wENquaRtZksvl8n_WqpqCeDrsAshRFrV7aJhdPnIvRgya6l7T_QSaQvnmaYkx5zjzaOrNxYMxNAk2pRWtTeZo3DFipak7s1UCCrn4v0bAX7oHW9O4C2nWatTTRDsU6lGqV9TEYWy97MOPJpJYvqsAbTkwuvnt0k7lIkXZSvZW79i"/>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 text-white text-[12px] font-bold rounded">05:45</div>
+</div>
+<div class="flex gap-3">
+<div class="flex-shrink-0 w-9 h-9 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Logo for a 3D visualization firm, consisting of a minimalist geometric 'A' formed by two converging red laser lines. The background is a dark gray textured surface, creating a premium and industrial tech feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD9jlhzg38w9qo8CT0kdLUQo_rtdCdyCk466o_z6Ptfs29-9sM3y-dwlaFQTOD86qkgQnPmRCDuvZL5TCX1yjI-gkGri5i9Q8JG7hECk1cs_LQ_wLl0n2Ylwd9r1vzwdO3vC10SSoYE-QVAWAmUdYsGPC6yNsZ1Zq2m43ksgDJQi3dBqab0yg4XCnR39rtKQAWwpFFOkZC6BHrT9xh-iyIDUA3u_mIbG0A8WYK0HAbk-plKW0MuQZ5xDe-kPJJOdOANjYPUdie3KEe"/>
+</div>
+<div class="flex flex-col pr-6">
+<h3 class="text-on-surface font-bold text-body-md line-clamp-2 leading-tight mb-1 group-hover:text-primary transition-colors">Horizon Villa: Advanced Lumion Rendering Techniques</h3>
+<p class="text-on-surface-variant text-body-sm">ArcVis Pro • 102k views</p>
+<div class="flex gap-2 mt-1">
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">3ds Max</span>
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">Lumion</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project Card 5 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A concept thumbnail for a music streaming app. It shows a blurred background of a concert crowd with sharp UI overlays of a 'Now Playing' screen. The UI features oversized typography, soft glass blur effects, and a vibrant red play button, echoing the cinematic and corporate modern style of the design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNGWvxrL4Y2htRKxFOQr-IFdipUnN855UXGS2DpRg08p5wCBSx8F4T6C8NcMDq5wEApq9B6ikCoUy0x2f4rLRFpSyaPJdmB3LkA1702v9bBncQdgfXSnpg-rdOh4a7Aq71h3haGcYa35qpj_gvpvElt6i-kuCvGijYn9M1V0zdJCPrL66pkNC5Bzf0cRA-8HwNg5HjJo8-Vh19GOJIt-1JTaEfsVkDYBhty-x1V348RpiV60E3fM2lhjm-J-NPZ00AdRdcEUC5_BZj"/>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 text-white text-[12px] font-bold rounded">11:02</div>
+</div>
+<div class="flex gap-3">
+<div class="flex-shrink-0 w-9 h-9 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Close-up of a designer's hand drawing on a tablet with a stylus. The image is shot in macro detail, showing the texture of the screen and the vibrant light reflecting on the skin. The color palette is dark with warm skin tones and cool screen light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTyNlslE9LYVAoEPF7qIi0UXdcNid7eihojZB9AoW9c-RpTOki2CAQKLavYNgdHlkIrmszFdH-RQzMtNmnenVpUSZHtSHnXiigzr2SteB08dq4SGkf5g_vCIC4N7XxTzr3E581jv9jc11-GddzxgRkoeysRaPiJrNRJKktDsN49WLqkIcndHxUlNb__M3lv-N8rFgD_l13BWTvDxW8xlt0lqWOoWk2s-YiA6UCQWrGE95jGK-MdTznbZWA9l65cztu9js4YFrXI3UY"/>
+</div>
+<div class="flex flex-col pr-6">
+<h3 class="text-on-surface font-bold text-body-md line-clamp-2 leading-tight mb-1 group-hover:text-primary transition-colors">Sonic Flow - Designing the Future of Music Discovery</h3>
+<p class="text-on-surface-variant text-body-sm">AudioLabs • 22k views</p>
+<div class="flex gap-2 mt-1">
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">SwiftUI</span>
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">Node.js</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project Card 6 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A dark and moody coding environment thumbnail. The screen shows lines of high-contrast colorful code (mostly red, white, and teal) reflected in the glossy surface of a desk. In the background, a small red desk lamp provides a warm localized glow, reinforcing the cinematic theater-like environment of the portfolio system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_aI_0mjhKwXpKRMt5AEDzFe94a-k68Bz11wdk3l3XrhmvFJ0DuR7xJ4ylhPK6Y-78A4-gOyxv81-I3wfLZK0PQiw3W0kqDKbzSS-ipGJjrXaODTrAKJy3_-eHwNXWNORhNlq9uEv1Y5Q_LC9eVKRtLh9JUwkFQGUFht6GS1R41MhAMz6k5Hm9bywt0A11aZFO6z8OR8FA7n9CoTRuGOelD_w2-AnABOpYBHScJ18tb3oKLWXExluuw7PWjBL8ojIS3AmGkEt9c6q6"/>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 text-white text-[12px] font-bold rounded">22:45</div>
+</div>
+<div class="flex gap-3">
+<div class="flex-shrink-0 w-9 h-9 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Modern geometric avatar of a developer, using overlapping circles in different shades of dark gray and a single primary red accent. The design is clean, professional, and fits perfectly into a tech-centric media library interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtOgthZebRxMJF0UDZm7Et6dJBFnCVvBqAxNCm11uE5_Tp_RnY08jSENQGjGyjHS4RCjMDvQ8DXJACybOfLxAkNFWHLHnMszjHNbHRkxshQ2rsOm9PFnYA2nxkPd7yNiUrO9iiWUCoT-gvkb_HBMJpwePh7nTeZFrs6bXAwyC0VktHIBzKzNFL3BDruN6NrmzH-wvamQwnrQdvwe2aGeD4af4f70Ud5PUuL1nHt2A9YTzmFN5NWqbVUVi5XH-g6Lnvpr6XK_Kx9zjX"/>
+</div>
+<div class="flex flex-col pr-6">
+<h3 class="text-on-surface font-bold text-body-md line-clamp-2 leading-tight mb-1 group-hover:text-primary transition-colors">Microservice Orchestration with Go and Kubernetes</h3>
+<p class="text-on-surface-variant text-body-sm">Backend Wizard • 64k views</p>
+<div class="flex gap-2 mt-1">
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">Golang</span>
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">K8s</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project Card 7 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A cinematic motion design project thumbnail. Swirling fluid simulations in vibrant red and metallic silver clash in a dark void. The lighting is dramatic, highlighting the viscosity and reflective properties of the liquids. The overall image is high-impact and utilitarian, serving as a hero visual for a portfolio showcase." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN6Ar7ScGgJWDuQ6T_CHDDQ22xcaJYPTyCWFMu4DRwO3I35ct4v_CUk9SDFKsAHozh9VzSWOWkoE6T5FYDzzGJNipZpcH3JYtz4VyzfS-0ELw-AilyXJulfLnLUFjPAaDFcXNIQG6ouF484jBNyyLDQoi84t5IY7GWjQONyM9T8B3yxyBS802W8y01GQtflwgxmUVXrvhFAfP11LIHAlQseGdWeNdYhz7nO61DC3yvLOpHQRAfsaZp2gSjNSFTghYLpRNt6PJNRJgG"/>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 text-white text-[12px] font-bold rounded">04:30</div>
+</div>
+<div class="flex gap-3">
+<div class="flex-shrink-0 w-9 h-9 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Abstract icon representing a design studio, featuring a stylized camera shutter combined with a circuit board pattern. The colors are strictly black, white, and a vibrant red accent, maintaining brand consistency with the corporate cinematic edge." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvzLrRKIudZWt4v14N6ivVcQKVKkuqjxTVIrIIpnr0HNZaefejs7v_SYXxgVKIiTZ1jGxP6gbckGJPcTTM7Z6LMgkV79kYUwuPnBsZG3l91EwUxpikqe2KUjHY1RBV0_f-qBnR3iF2LVml9RxoVLfgEI_YJLHDpPkhFJMQBax_-y-Sem0jzhjWNHS_tchNd_s_r_dgbu0cN3plEnSDaEYBGGsga15pHLhzjZHNHr5viS7gGjM_zFZ7boQpyNkr7e8lN66IKTjF6FsU"/>
+</div>
+<div class="flex flex-col pr-6">
+<h3 class="text-on-surface font-bold text-body-md line-clamp-2 leading-tight mb-1 group-hover:text-primary transition-colors">Fluid Dynamics: A Masterclass in Houdini Simulation</h3>
+<p class="text-on-surface-variant text-body-sm">Motion Craft • 15k views</p>
+<div class="flex gap-2 mt-1">
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">Houdini</span>
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">Motion</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project Card 8 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sleek data dashboard project thumbnail. The screen shows a world map with glowing connection points and real-time traffic statistics. The UI uses a deep charcoal background with glowing red data lines, perfectly embodying the high-contrast utilitarian design system of the platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsynj7a_9ulDJCzlvkrYRNHmorqI3SlNFCTSA1yX_Pp7xlJjCowtlXgz5ioshmn6EQmSVmb74_gXrPEFvJmNeG7bGlkuxxwmt7X8W5N-xYxoqi9jG8Wa70MAszFsZCA2QQB0kZH9_d_h7ukgscPFbBADIn0EgHwhPY0Rxj6USwyTAKtyz15tT8fUXBNHuzrXwGlIDw-S59c791Mn3MzoxM_RGtSNw71w_g0UKTbuJiHqBJOtw6iwcmAp6-sPcezTySRFgmw33ljXbp"/>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 text-white text-[12px] font-bold rounded">19:15</div>
+</div>
+<div class="flex gap-3">
+<div class="flex-shrink-0 w-9 h-9 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Portrait of a female software engineer in a modern office. She is looking thoughtfully at a screen off-camera. The lighting is natural but professionally controlled, with subtle lens flares and a shallow depth of field that keeps the focus on her expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzNww3AEZKwVQnPbAT0KVSdtQDLfXtQtMHKfY9azjeeCZclvw7tFgJayT9W0X-mhwZdj54fqcVEmf8vrzJLfwCbH6hn1m5bTGVMgLd7-zUhg0x8rBDmJYFbCS0PzQQKm-dau-gXBZcbmZ2YQ6A1XHI3kuVhSlVLf8p8S5618TNti0f9Xzytam6zIbQ17bQ9Bp4yEOFP1XWvZ8YJLJDiYyI8dKzrsQmvKRmDUlzWCEwMYKwCHs5gWwfQtLfBSVW7akcYJI1Q3lMKA2S"/>
+</div>
+<div class="flex flex-col pr-6">
+<h3 class="text-on-surface font-bold text-body-md line-clamp-2 leading-tight mb-1 group-hover:text-primary transition-colors">GeoData: Visualizing Global Logistics in Real-time</h3>
+<p class="text-on-surface-variant text-body-sm">LogiTech Solutions • 3k views</p>
+<div class="flex gap-2 mt-1">
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">Python</span>
+<span class="text-primary text-[11px] font-bold uppercase tracking-wider">D3.js</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full py-6 px-4 flex flex-wrap gap-4 justify-start max-w-container-max mx-auto border-t border-outline-variant mt-10">
+<div class="flex flex-wrap gap-4 items-center w-full">
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">About</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Press</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Copyright</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact us</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Creators</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Advertise</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Developers</a>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-2 w-full">© 2024 Portfolio Stream. All rights reserved.</p>
+</footer>
+</main>
+<!-- Mobile Bottom Navigation Bar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-background border-t border-outline-variant flex justify-around items-center h-16 z-50">
+<button class="flex flex-col items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px]">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[10px]">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="text-[10px]">Upload</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="subscriptions">subscriptions</span>
+<span class="text-[10px]">Subs</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px]">You</span>
+</button>
+</nav>
+<!-- Contextual FAB (Only for Home/Explore screens) -->
+<button class="fixed right-6 bottom-20 md:bottom-10 bg-primary text-on-primary w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg hover:opacity-90 active:scale-95 transition-all z-40 lg:hidden">
+<span class="material-symbols-outlined" data-icon="add" style="font-variation-settings: 'wght' 600;">add</span>
+</button>
+<script>
+        // Micro-interaction for filter chips
+        const chips = document.querySelectorAll('.filter-bar button');
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => {
+                    c.classList.remove('bg-on-surface', 'text-background');
+                    c.classList.add('bg-surface-container-high', 'text-on-surface');
+                });
+                chip.classList.remove('bg-surface-container-high', 'text-on-surface');
+                chip.classList.add('bg-on-surface', 'text-background');
+            });
+        });
+
+        // Search Bar Focus Effect
+        const searchInput = document.querySelector('input[type="text"]');
+        const searchContainer = searchInput?.parentElement;
+        if(searchInput && searchContainer) {
+            searchInput.addEventListener('focus', () => {
+                searchContainer.classList.add('ring-1', 'ring-primary');
+            });
+            searchInput.addEventListener('blur', () => {
+                searchContainer.classList.remove('ring-1', 'ring-primary');
+            });
+        }
+    </script>
+</body></html>

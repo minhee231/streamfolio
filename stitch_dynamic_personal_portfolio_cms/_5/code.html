@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Streamfolio | Project Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#002f67",
+                    "primary-fixed-dim": "#ffb4a8",
+                    "inverse-primary": "#c00100",
+                    "tertiary-fixed-dim": "#acc7ff",
+                    "on-secondary-fixed": "#001d35",
+                    "on-primary-container": "#5c0000",
+                    "background": "#0f0f0f",
+                    "surface": "#1f1f1f",
+                    "outline": "#b18780",
+                    "surface-dim": "#131313",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-fixed": "#ffdad4",
+                    "on-surface-variant": "#ebbbb4",
+                    "on-surface": "#e5e2e1",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#930100",
+                    "on-secondary-container": "#002b4c",
+                    "tertiary-container": "#488fff",
+                    "on-secondary": "#003257",
+                    "secondary-fixed-dim": "#9ccaff",
+                    "on-error": "#690005",
+                    "on-secondary-fixed-variant": "#00497b",
+                    "surface-variant": "#353534",
+                    "surface-bright": "#3a3939",
+                    "secondary-fixed": "#d0e4ff",
+                    "error": "#ffb4ab",
+                    "primary": "#ffb4a8",
+                    "surface-tint": "#ffb4a8",
+                    "surface-container": "#201f1f",
+                    "outline-variant": "#603e39",
+                    "on-tertiary-fixed-variant": "#004491",
+                    "tertiary-fixed": "#d7e2ff",
+                    "secondary-container": "#2295ed",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-primary-fixed": "#410000",
+                    "primary-container": "#ff5540",
+                    "on-primary": "#690100",
+                    "on-tertiary-fixed": "#001a40",
+                    "on-background": "#e5e2e1",
+                    "inverse-surface": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "surface-container-highest": "#353534",
+                    "tertiary": "#acc7ff",
+                    "error-container": "#93000a",
+                    "secondary": "#9ccaff",
+                    "on-tertiary-container": "#00285b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "sidebar-width": "240px",
+                    "gutter": "16px",
+                    "sidebar-collapsed-width": "72px",
+                    "container-max": "1280px",
+                    "margin-desktop": "24px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+                    "headline-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["18px", {"lineHeight": "26px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0f0f0f;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .video-aspect {
+            aspect-ratio: 16 / 9;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0f0f0f;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #603e39;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background custom-scrollbar">
+<!-- TopNavBar Execution -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 h-14 bg-background">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</button>
+<div class="text-headline-lg font-headline-lg font-bold text-on-surface flex items-center gap-1">
+<span class="text-primary-container material-symbols-outlined" style="font-size: 32px; font-variation-settings: 'FILL' 1;">play_circle</span>
+                Streamfolio
+            </div>
+</div>
+<div class="hidden md:flex flex-1 max-w-2xl px-8">
+<div class="relative w-full">
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-full py-2 px-5 focus:outline-none focus:border-primary text-body-md font-body-md" placeholder="Search projects..." type="text"/>
+<button class="absolute right-0 top-0 h-full px-5 bg-surface-container-high rounded-r-full border-l border-outline-variant hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 md:gap-4">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors text-on-surface">
+<span class="material-symbols-outlined">video_call</span>
+</button>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors text-on-surface">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a creative director with short hair and modern glasses, lit by dramatic cinematic lighting with high contrast. The background is a soft-focus studio environment with deep blacks and subtle red rim lighting, maintaining a sleek and professional Corporate Modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMmM8UM4yiBWEMFI29lOxs-sBAxTjkhhzd0E4zsyE293IJ9w6TF17TDukBmOIdhfgNMHVc2PQGYV2cxN-QE691ZJNIic1VEgb0Eo0CaXpFUp2xlNKnqABe9CGMr0VTEVbCRmYaOFt08M04EhvodjsLJkbfHQSEV2gsj3sbKcNyRuHVqdz64UFmK1gov8qEWs6Yth_HmmtDi06NQV5GsxYMxID9AmJbeGfP3bkHReBKQOjsifn2K48rNuCEuzZSkHkYbf7FJh_FROfb"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar Execution (Hidden on mobile for focus) -->
+<aside class="hidden lg:flex fixed left-0 top-14 h-[calc(100vh-56px)] w-sidebar-width flex-col p-2 overflow-y-auto">
+<nav class="space-y-1">
+<a class="flex items-center gap-4 bg-surface-container-highest text-on-surface font-bold rounded-lg px-3 py-2 scale-95 transition-transform duration-100" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-md font-label-md">Home</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all" href="#">
+<span class="material-symbols-outlined">video_library</span>
+<span class="text-label-md font-label-md">Projects</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-label-md font-label-md">Resume</span>
+</a>
+<div class="my-4 border-t border-outline-variant mx-2"></div>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-md font-label-md">About</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="text-label-md font-label-md">Contact</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<main class="pt-14 lg:pl-sidebar-width min-h-screen">
+<div class="max-w-[1700px] mx-auto p-4 md:p-6 lg:flex gap-6">
+<!-- Left Column: Video & Details -->
+<div class="lg:flex-1">
+<!-- Video Player Area -->
+<div class="w-full video-aspect bg-surface-container-lowest rounded-xl overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="A wide cinematic shot of a futuristic user interface projected in a dark room. The screen displays complex data visualizations and 3D architectural renders in glowing red and white neon lines against a deep black void. The mood is high-tech and immersive, reflecting a 'video-first' entertainment aesthetic with rapid scannability and professional clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9oX6G9mAbPwbsFrvKU9oHw2Xfcbbqvj4NY41yqgdt3BPqEv-8CrOBC9ouLNAkA23t0XTUpgoInFE-Eg5cq6WOx1j1MBD6_O56pUACXjdECJenWU9fhhh-CT7ur4zjL52fV3Oe_dV9InJAV_aTVH6Tg3ys10EnyPkwAjg80gkn8z4aPqK9iHmOwjvmiN2LEwRDYzQspOjqJ2wZKY3rRnTcuN8XruFrvhk3ZjfUQKtQinFeYv4DzvvdIiIV1rwIXyGn0YEJZlTmo99u"/>
+<!-- Fake Player Controls Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+<div class="w-full bg-white/20 h-1 rounded-full mb-4 overflow-hidden">
+<div class="w-2/3 h-full bg-primary-container"></div>
+</div>
+<div class="flex justify-between items-center text-white">
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer">play_arrow</span>
+<span class="material-symbols-outlined cursor-pointer">skip_next</span>
+<span class="material-symbols-outlined cursor-pointer">volume_up</span>
+<span class="text-body-sm font-body-sm self-center">12:45 / 18:20</span>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer">closed_caption</span>
+<span class="material-symbols-outlined cursor-pointer">settings</span>
+<span class="material-symbols-outlined cursor-pointer">fullscreen</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Metrics & Quick Actions -->
+<div class="mt-4">
+<h1 class="text-headline-xl font-headline-xl text-on-surface leading-tight">Quantum Architectural Visualization Suite</h1>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mt-2">
+<div class="text-body-md font-body-md text-on-surface-variant flex items-center gap-2">
+<span>1.2M views</span>
+<span class="w-1 h-1 rounded-full bg-on-surface-variant"></span>
+<span>Oct 24, 2024</span>
+<span class="ml-4 px-2 py-0.5 bg-surface-container-high text-label-sm font-label-sm rounded uppercase">#ProductDesign</span>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0">
+<button class="flex items-center gap-2 bg-surface-container-high hover:bg-surface-variant px-4 py-2 rounded-full transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+<span class="text-label-md font-label-md">45k</span>
+</button>
+<button class="flex items-center gap-2 bg-surface-container-high hover:bg-surface-variant px-4 py-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">share</span>
+<span class="text-label-md font-label-md">Share</span>
+</button>
+<button class="flex items-center gap-2 bg-surface-container-high hover:bg-surface-variant px-4 py-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">download</span>
+<span class="text-label-md font-label-md">Assets</span>
+</button>
+<button class="p-2 bg-surface-container-high hover:bg-surface-variant rounded-full transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Channel Info & Description -->
+<div class="mt-6 p-4 bg-surface-container-low rounded-xl">
+<div class="flex items-start gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-outline-variant overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close-up of a designer's hands sketching a futuristic building concept on a digital tablet. The room is dimly lit with cool blue ambient light and warm orange desktop lamps, creating a high-contrast cinematic atmosphere. The focus is sharp on the stylus making contact with the glowing screen, emphasizing precision and creativity in a modern professional studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqPPumuJTg2GBPCh1Kbh8LIbieHGWHWw8Y24nSfSb_LA-UvLSJ2XICOM5TrSYkfKWPc0sV27RkPsE6Z-0qBsMuDhA-V1ZrPU-AJAGYS_FpF3sNMfng3BtWPvL8FncqTEnYj3Hm6Zs1k9VO_uMePaTGkrY8jgWoZPGv9ca-5TPk08Q4rG-0IsdTcUrb2twPl6HeDm6jXLwbxO6a8bheQCJ7gUf6IgttvYTNRUez9Tb9rNqX239tc9msaj1F6SZMHVxj0SWoaN5IQQu8"/>
+</div>
+<div class="flex-1">
+<h3 class="text-headline-lg font-headline-lg text-on-surface">Creative Labs Inc.</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">450K subscribers</p>
+</div>
+<button class="bg-on-surface text-surface px-6 py-2 rounded-full font-bold text-label-md hover:bg-on-surface-variant transition-colors">
+                            Follow
+                        </button>
+</div>
+<!-- Description Sections -->
+<div class="space-y-6">
+<div>
+<h4 class="text-label-md font-label-md text-primary mb-2 uppercase tracking-widest">The Challenge</h4>
+<p class="text-body-md font-body-md leading-relaxed">
+                                The architectural sector faced a significant bottleneck in real-time rendering and client collaboration. Traditional static renders failed to convey spatial dynamics, leading to 35% more revision cycles than necessary. We needed to create a system that allowed for sub-millisecond ray tracing on mobile devices while maintaining 4K fidelity for presentation.
+                            </p>
+</div>
+<div>
+<h4 class="text-label-md font-label-md text-primary mb-2 uppercase tracking-widest">The Process</h4>
+<p class="text-body-md font-body-md leading-relaxed">
+                                Our sprint began with a comprehensive audit of existing WebGL pipelines. We implemented a custom shader library designed to offload 40% of geometry processing to the client GPU. Over 4 months, we prototyped three distinct UI paradigms—asymmetric, bento, and traditional—ultimately landing on the cinematic immersive mode seen here.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Impact & Results (Replacement for Comments) -->
+<div class="mt-8">
+<div class="flex items-center gap-4 mb-6">
+<h2 class="text-headline-lg font-headline-lg text-on-surface">Impact &amp; Results</h2>
+<span class="text-body-md font-body-md text-on-surface-variant">Key Deliverables</span>
+</div>
+<!-- Impact Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="p-6 bg-surface-container rounded-2xl border border-white/5 flex flex-col items-center text-center">
+<span class="text-headline-xl font-headline-xl text-primary-container mb-2">40%</span>
+<span class="text-label-md font-label-md uppercase tracking-wider opacity-60">Faster Renders</span>
+</div>
+<div class="p-6 bg-surface-container rounded-2xl border border-white/5 flex flex-col items-center text-center">
+<span class="text-headline-xl font-headline-xl text-primary-container mb-2">12M</span>
+<span class="text-label-md font-label-md uppercase tracking-wider opacity-60">Polygons Handled</span>
+</div>
+<div class="p-6 bg-surface-container rounded-2xl border border-white/5 flex flex-col items-center text-center">
+<span class="text-headline-xl font-headline-xl text-primary-container mb-2">68%</span>
+<span class="text-label-md font-label-md uppercase tracking-wider opacity-60">Client Approval Rate</span>
+</div>
+</div>
+<div class="mt-6 flex flex-col gap-4">
+<div class="flex gap-4 p-4 border-l-4 border-primary-container bg-surface-container-low rounded-r-xl">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="text-body-md font-body-md italic text-on-surface">
+                                "The Quantum Suite transformed our presentation layer. We've closed projects in half the usual time thanks to the real-time interactivity." 
+                                <span class="block mt-2 not-italic font-bold text-on-surface-variant">— Sarah Jenkins, Lead Architect at AeroVironment</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Up Next / Related Projects -->
+<div class="lg:w-[400px] mt-8 lg:mt-0 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h2 class="text-headline-lg font-headline-lg text-on-surface">Related Projects</h2>
+<div class="flex gap-2">
+<span class="text-label-md font-label-md bg-surface-container px-3 py-1 rounded-full text-on-surface cursor-pointer">All</span>
+<span class="text-label-md font-label-md bg-surface-container-high px-3 py-1 rounded-full text-on-surface cursor-pointer">UX Design</span>
+</div>
+</div>
+<!-- Related Project Card 1 -->
+<div class="flex gap-3 group cursor-pointer">
+<div class="relative w-40 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="A professional high-end digital dashboard displaying real-time financial data with glowing lines and graphs. The aesthetic is clean, cinematic, and technical, with dark mode backgrounds and vibrant red accent points for critical alerts. The design reflects a corporate modern visual style with tight spacing and professional typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIbh70nCUWwOAPj_aLqOt0enK1Udb6g4d3ETw8M-Pv62BfwXkyu_60TiuNd-7wAXLV1viPWN5EBNyIWTKTkRLmEmyBXa5umpFnmen-xYoARNpySZ3apNQM6k9nGYreQq1GdDvDEM7u6obTS_E6u-Qt9Pe-j9GNgOmZ2MR0P8q88uVzcvY62tPENEY4VCtZ7rdELRAz3jgB90nq1rqZW66l3ZlHyYS7DLyBWeEHmAe-jsEO_XGiTpkudjqNCNQF1VcAXqH3kWTtSIpn"/>
+<div class="absolute bottom-1 right-1 bg-black/80 text-white text-[10px] px-1 rounded">14:20</div>
+</div>
+<div class="flex flex-col">
+<h4 class="text-body-md font-bold text-on-surface line-clamp-2 leading-tight group-hover:text-primary transition-colors">Neo-Fintech Dashboard Framework</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Creative Labs Inc.</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">200K views • 2 weeks ago</p>
+</div>
+</div>
+<!-- Related Project Card 2 -->
+<div class="flex gap-3 group cursor-pointer">
+<div class="relative w-40 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="A minimalist architectural model of a smart home, glowing with internal lights against a dark, moody background. The photography is professional and cinematic, emphasizing clean lines and futuristic materials. The color palette consists of deep charcoal, bright white, and sharp red accents, maintaining a utilitarian and high-contrast professional look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4FNt0Y03BjLxI1RpC2Ng3v05VWumnHt3enj6gU-mqTQnZcmDiZAP7QKI0uCpbAVgNTG8dADS0z6k5JRPc4e_Y38DcGcCIAnOJ7dXXIi4KwzksWks_C4X8cSkxjScr0wN0fty1mffzVjtcvcvF3h1JhONeEC2-K1_ILcMulQ-1Zty_TRlVgMSnjUaWql-IO94RigLhpRe9Ztaovj8U6sEtsfCVydAeYtaMlpbD8ILUS0xg8KUnQw1t4hTebOwgjcbp8sn7cKYswmtc"/>
+<div class="absolute bottom-1 right-1 bg-black/80 text-white text-[10px] px-1 rounded">08:45</div>
+</div>
+<div class="flex flex-col">
+<h4 class="text-body-md font-bold text-on-surface line-clamp-2 leading-tight group-hover:text-primary transition-colors">Smart Ecosystem: Residential Case Study</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Creative Labs Inc.</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">89K views • 1 month ago</p>
+</div>
+</div>
+<!-- Related Project Card 3 -->
+<div class="flex gap-3 group cursor-pointer">
+<div class="relative w-40 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Abstract 3D rendered wave patterns moving through a digital space, illuminated by glowing red light. The scene is cinematic and atmospheric, emphasizing fluid motion and technological complexity. The background is pure black, allowing the light-mode UI elements to pop with professional clarity and high visual impact." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMV2OTKgsZ7eUFiJpTshiwKMhQbz73yZr65_qvVKXtua_fNDd2sumdg5_QrPt7GIv9kkYbrNFAJOfpcyBCQrWr7-YqlPC4f2bnjc_EzT8_kyZrwVuJ5V3_sIFrMsS7SOXVLI9nAmp8Dg90R5ww_SitDn9VSD5ovUXY99sDvGrc45aQrK4Snu5a_LFp1Lx4TVyUl9fDjO8NCzks0_odBkhFYbYtpAoP0Xhas_i1hbUc3ivUnhbKuPYkgKacRZ-fjgYhK8px4pEFugGL"/>
+<div class="absolute bottom-1 right-1 bg-black/80 text-white text-[10px] px-1 rounded">22:15</div>
+</div>
+<div class="flex flex-col">
+<h4 class="text-body-md font-bold text-on-surface line-clamp-2 leading-tight group-hover:text-primary transition-colors">Kinetic Motion Design Pipeline</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Creative Labs Inc.</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">500K views • 3 months ago</p>
+</div>
+</div>
+<!-- Related Project Card 4 -->
+<div class="flex gap-3 group cursor-pointer">
+<div class="relative w-40 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="A top-down view of a designer's desk with a high-end laptop showing code and a smartphone displaying a mobile app. The room is dark, with only the screens providing light. The lighting is dramatic and cinematic, with a focus on professional workflow and sleek, modern technology in a high-contrast corporate environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzw9ysd31dpU2dis1YtyjI947eZQL6UTEuolvuVURLH72fQAqBOPPnffU5NUOakYDGMoxA34lYdQC6DyK8fGHY1SA2PNV5kVtscImzoaxXOqKyVtBmQF6o7jxRiOpWb8hQ6Iljy39HJ8P32o2JNB55hxgExlXAlY5BewT3jAFUrBfotyedqAIxvt3H0HphM2PA1R_9L2A4hEWa2Qv1GI7io9qK159L1mmAvNyh13f3uzTUbszRvGe0jkBHHyR5C1CLyYxGJGLwJKX7"/>
+<div class="absolute bottom-1 right-1 bg-black/80 text-white text-[10px] px-1 rounded">05:30</div>
+</div>
+<div class="flex flex-col">
+<h4 class="text-body-md font-bold text-on-surface line-clamp-2 leading-tight group-hover:text-primary transition-colors">Responsive Web Workflow 2024</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Creative Labs Inc.</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">1.5M views • 6 months ago</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Execution -->
+<footer class="mt-12 border-t border-outline-variant bg-background">
+<div class="w-full py-8 px-4 flex flex-wrap gap-x-8 gap-y-4 justify-start max-w-container-max mx-auto">
+<div class="w-full mb-4">
+<div class="text-headline-lg font-headline-lg font-bold text-on-surface flex items-center gap-1 opacity-50 grayscale">
+<span class="text-primary-container material-symbols-outlined" style="font-size: 24px; font-variation-settings: 'FILL' 1;">play_circle</span>
+                    Streamfolio
+                </div>
+</div>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">About</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Press</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Copyright</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact us</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Creators</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Advertise</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Developers</a>
+<div class="w-full mt-4 text-label-sm font-label-sm text-on-surface-variant opacity-60">
+                © 2024 Portfolio Stream. All rights reserved. Professional Portfolio Network.
+            </div>
+</div>
+</footer>
+<!-- Micro-interaction Script -->
+<script>
+        // Simple click listener for buttons to simulate interaction
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => {
+                btn.style.transform = 'scale(0.95)';
+            });
+            btn.addEventListener('mouseup', () => {
+                btn.style.transform = 'scale(1)';
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

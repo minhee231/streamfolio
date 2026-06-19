@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"C:\\\\Users\\\\USER\\\\Documents\\\\land_claude\\\\\")",
+      "Bash(mkdir -p C:/Users/USER/Documents/isaac-portfolio/.claude/agents C:/Users/USER/Documents/isaac-portfolio/.claude/commands)",
+      "Bash(pip install *)",
+      "Bash(python -m pytest -x -q)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npx playwright *)",
+      "Bash(python seed.py)",
+      "Bash(Start-Process -WindowStyle Hidden -FilePath \"python\" -ArgumentList \"-m uvicorn main:app --port 8000\" -PassThru)",
+      "Bash(Select-Object -ExpandProperty Id)",
+      "Bash(uvicorn main:app --port 8000)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173/)",
+      "Bash(railway version *)",
+      "Bash(vercel --version)",
+      "Bash(railway --version)",
+      "Bash(railway whoami *)"
+    ]
+  }
+}

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Streamfolio | Professional Developer Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#002f67",
+                    "primary-fixed-dim": "#ffb4a8",
+                    "inverse-primary": "#c00100",
+                    "tertiary-fixed-dim": "#acc7ff",
+                    "on-secondary-fixed": "#001d35",
+                    "on-primary-container": "#5c0000",
+                    "background": "#131313",
+                    "surface": "#131313",
+                    "outline": "#b18780",
+                    "surface-dim": "#131313",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-fixed": "#ffdad4",
+                    "on-surface-variant": "#ebbbb4",
+                    "on-surface": "#e5e2e1",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#930100",
+                    "on-secondary-container": "#002b4c",
+                    "tertiary-container": "#488fff",
+                    "on-secondary": "#003257",
+                    "secondary-fixed-dim": "#9ccaff",
+                    "on-error": "#690005",
+                    "on-secondary-fixed-variant": "#00497b",
+                    "surface-variant": "#353534",
+                    "surface-bright": "#3a3939",
+                    "secondary-fixed": "#d0e4ff",
+                    "error": "#ffb4ab",
+                    "primary": "#ffb4a8",
+                    "surface-tint": "#ffb4a8",
+                    "surface-container": "#201f1f",
+                    "outline-variant": "#603e39",
+                    "on-tertiary-fixed-variant": "#004491",
+                    "tertiary-fixed": "#d7e2ff",
+                    "secondary-container": "#2295ed",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-primary-fixed": "#410000",
+                    "primary-container": "#ff5540",
+                    "on-primary": "#690100",
+                    "on-tertiary-fixed": "#001a40",
+                    "on-background": "#e5e2e1",
+                    "inverse-surface": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "surface-container-highest": "#353534",
+                    "tertiary": "#acc7ff",
+                    "error-container": "#93000a",
+                    "secondary": "#9ccaff",
+                    "on-tertiary-container": "#00285b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "sidebar-width": "240px",
+                    "gutter": "16px",
+                    "sidebar-collapsed-width": "72px",
+                    "container-max": "1280px",
+                    "margin-desktop": "24px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+                    "headline-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["18px", {"lineHeight": "26px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F0F0F;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0F0F0F;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #3F3F3F;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #717171;
+        }
+        .video-aspect {
+            aspect-ratio: 16 / 9;
+        }
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-background">
+<!-- TopNavBar Implementation -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 h-14 bg-background">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors duration-150">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</button>
+<div class="flex items-center gap-1 text-headline-lg font-headline-lg font-bold text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span>Streamfolio</span>
+</div>
+</div>
+<div class="hidden md:flex flex-1 max-w-2xl mx-10">
+<div class="flex w-full bg-surface-container-lowest border border-outline-variant rounded-full overflow-hidden">
+<input class="w-full bg-transparent border-none px-5 py-2 text-body-md focus:ring-0 placeholder:text-on-surface-variant" placeholder="Search projects..." type="text"/>
+<button class="bg-surface-container-high px-5 border-l border-outline-variant hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-on-surface">search</span>
+</button>
+</div>
+<button class="ml-4 p-2 bg-surface-container-low hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface">video_call</span>
+</button>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden ml-2 cursor-pointer border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a software developer with a clean, cinematic lighting setup. The subject is a young adult with a confident smile, wearing a modern dark blazer against a soft-focus office background with hints of warm amber light. The overall aesthetic is high-end corporate modern with high contrast and sharp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz7IgkqZbhp75MyzIH5tNQISG-zmr7ONJNinkG3sHSOmHMpjMDRLmV6Gfy0lx3PVh0IFb45Zg3j2FxeZsjKV8uu1QACsiynXNUrOEJMy1Xux2rjdx2qi0FuYkF73VhYP9R6hwix3gjUEHolgWS6Ay_Tym5oMfely-jv5MM5hCCRuago6-yoRYLAO5d2tOXqe3eEAKsiwhvoWhsP7YR4KOxcKhHyRYEEOiov3R6aRGpsNq0a3_0UxWTSPfubV_OD33QbUmdJDIXMrZF"/>
+</div>
+</div>
+</header>
+<!-- Sidebar Implementation -->
+<aside class="fixed left-0 top-14 h-[calc(100vh-56px)] w-sidebar-width flex flex-col p-2 overflow-y-auto custom-scrollbar bg-background hidden md:flex">
+<nav class="space-y-1">
+<a class="flex items-center gap-4 bg-surface-container-highest text-on-surface font-bold rounded-lg px-3 py-3 transition-transform duration-100 active:scale-95" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-md font-label-md">Home</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-3 transition-all" href="#">
+<span class="material-symbols-outlined">video_library</span>
+<span class="text-label-md font-label-md">Projects</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-3 transition-all" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-label-md font-label-md">Resume</span>
+</a>
+<hr class="my-3 border-outline-variant opacity-20"/>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-3 transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-md font-label-md">About</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-3 transition-all" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="text-label-md font-label-md">Contact</span>
+</a>
+<hr class="my-3 border-outline-variant opacity-20"/>
+<div class="px-3 py-2 text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant">Tech Stack</div>
+<div class="space-y-1">
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all" href="#">
+<div class="w-6 h-6 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="text-[10px] font-bold text-primary">TS</span>
+</div>
+<span class="text-label-md font-label-md">TypeScript</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all" href="#">
+<div class="w-6 h-6 rounded-full bg-secondary-container/20 flex items-center justify-center">
+<span class="text-[10px] font-bold text-secondary">R</span>
+</div>
+<span class="text-label-md font-label-md">React</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface hover:bg-surface-container rounded-lg px-3 py-2 transition-all" href="#">
+<div class="w-6 h-6 rounded-full bg-tertiary-container/20 flex items-center justify-center">
+<span class="text-[10px] font-bold text-tertiary">N</span>
+</div>
+<span class="text-label-md font-label-md">Next.js</span>
+</a>
+</div>
+</nav>
+<footer class="mt-auto pt-6 pb-4 px-3">
+<div class="flex flex-wrap gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<a class="hover:text-on-surface transition-colors" href="#">About</a>
+<a class="hover:text-on-surface transition-colors" href="#">Press</a>
+<a class="hover:text-on-surface transition-colors" href="#">Contact</a>
+<a class="hover:text-on-surface transition-colors" href="#">Creators</a>
+</div>
+<p class="mt-4 text-[10px] text-on-surface-variant/60">© 2024 Portfolio Stream. All rights reserved.</p>
+</footer>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pt-14 md:pl-sidebar-width min-h-screen">
+<div class="max-w-container-max mx-auto p-4 md:p-6 lg:p-8">
+<!-- Hero Section: Featured Project -->
+<section class="relative group mb-12 rounded-xl overflow-hidden shadow-2xl">
+<div class="video-aspect relative w-full overflow-hidden bg-surface-container-lowest">
+
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-transparent to-black/20"></div>
+<div class="absolute bottom-0 left-0 p-6 md:p-12 w-full lg:w-2/3">
+<div class="inline-flex items-center gap-2 bg-primary-container text-on-primary px-3 py-1 rounded-md text-label-sm font-label-sm uppercase tracking-widest mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                            Featured Project
+                        </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-3 drop-shadow-lg">NeuralEngine: Real-time Data Visualization</h1>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-3 max-w-xl">
+                            A high-performance WebGL dashboard for monitoring distributed cloud infrastructure. Featuring low-latency data streaming, custom shader-based node maps, and predictive analysis modules. Built with Next.js, Three.js, and Rust.
+                        </p>
+<div class="flex flex-wrap items-center gap-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-primary-container/90 transition-all active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                View Project
+                            </button>
+<button class="bg-surface-container-highest/80 backdrop-blur-md text-on-surface px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-surface-container-highest transition-all">
+<span class="material-symbols-outlined">info</span>
+                                Technical Specs
+                            </button>
+</div>
+</div>
+<div class="absolute bottom-6 right-6 hidden md:flex items-center gap-2">
+<span class="text-on-surface text-body-sm font-medium bg-black/60 px-2 py-1 rounded">08:42</span>
+<div class="w-10 h-10 rounded-full border-2 border-primary-container flex items-center justify-center bg-black/40 backdrop-blur-sm cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary-container">volume_up</span>
+</div>
+</div>
+</div>
+<div class="h-1 w-full bg-surface-container-high relative overflow-hidden">
+<div class="absolute top-0 left-0 h-full w-2/3 bg-primary-container shadow-[0_0_8px_rgba(255,85,64,0.8)]"></div>
+</div>
+</section>
+<!-- Filters/Chips Row -->
+<div class="flex items-center gap-3 overflow-x-auto pb-6 custom-scrollbar no-scrollbar">
+<button class="whitespace-nowrap px-4 py-1.5 rounded-lg bg-on-surface text-background font-bold text-label-md transition-colors">All</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-container text-on-surface text-label-md transition-colors">Full Stack</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-container text-on-surface text-label-md transition-colors">WebGL/Graphics</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-container text-on-surface text-label-md transition-colors">Open Source</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-container text-on-surface text-label-md transition-colors">Mobile Apps</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-container text-on-surface text-label-md transition-colors">E-commerce</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-container text-on-surface text-label-md transition-colors">AI/ML</button>
+</div>
+<!-- Recommended Grid -->
+<div class="mb-10">
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">recommend</span>
+                    Recommended Projects
+                </h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-10">
+<!-- Video Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative video-aspect rounded-xl overflow-hidden bg-surface-container-low mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A cinematic 16:9 thumbnail for a software project called 'Aetherial UI'. The image shows a sleek, dark glassmorphism dashboard with vibrant purple and neon red glowing accents. High-tech charts and floating data particles create a sense of depth and motion. Modern professional lighting with deep contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX8EKJCMxjBpmmHYkfEgvlz2nI_HEfqadgLSol71JQykmSFZlGf_GKMneMP7RxQ8cF8vD8J4amnoZbtfOiCTqRGxVA-pclvo77Uzr-Fy_QIrYchvbx3uyN76fFq58zel_uAl_-nXjQM14ax2MgmAROYxiGqPXYptJkMVMc3WopJH23KscrZvV0EgNubhRuPex8VlhhaRnermtn7Xc38XGnFIxNk6poCI6Cc0XJoPhSlBMoqnh5whGPqwXSJdKC1PVXEAG5C7Uc9agI"/>
+<span class="absolute bottom-2 right-2 bg-black/80 text-white text-[11px] font-bold px-1.5 py-0.5 rounded">12:15</span>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl opacity-80" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="flex-shrink-0 w-9 h-9 rounded-full overflow-hidden mt-1">
+<img class="w-full h-full object-cover" data-alt="Small round avatar of a creative director, close-up, neutral lighting, looking directly at the camera. Professional and clean corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6hBVj2RFTrmmIPT8xBAjJde486dabO3wnKWHoYKvxlO7Yd3Ny0bWLRIWLIuphbH2FpPQkllQt3Ey66fPd_pd68pY-4gREgmynW2mFMZVizoc8NERO59T3U4cgYtlrMDt9o559majtX6_vMmyXN7qFaU5ZqcvQW-sjyqsGcSPvUtkF7f9GOVIE5xYzYZ4T3uqm76NNrEk3lYp6-I0s7osK1vAmuk7Qtm2V6DhEdjT65mJWFbV_sHTCmcdXHVUH5rfko8OzCd4dWhF4"/>
+</div>
+<div class="flex-grow">
+<h3 class="text-on-surface font-semibold text-body-md line-clamp-2 leading-tight mb-1 group-hover:text-primary transition-colors">Aetherial UI: A New Paradigm for Design Systems</h3>
+<p class="text-on-surface-variant text-body-sm mb-0.5">Streamfolio Design</p>
+<div class="flex items-center text-on-surface-variant text-body-sm">
+<span>24k views</span>
+<span class="mx-1">•</span>
+<span>2 weeks ago</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Video Card 2 -->
+<div class="group cursor-pointer">
+<div class="relative video-aspect rounded-xl overflow-hidden bg-surface-container-low mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cinematic 16:9 thumbnail for a crypto dashboard project. It features an intricate 3D wireframe globe rotating in a void, illuminated by sharp red lasers. Stylized price tickers and trading charts wrap around the sphere. Sophisticated dark mode UI with high-end lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRzFAXIlBdjbTz82Mm3HS_vxn9CaJwN15yLLUAWrrPFiRDstPmLn7nR5NEzK94JGygwgk1MOohN4xtKu2NAlJJeG2SteK7Za-l4glhS9z1jn997pe97yGWH3dRKxHvviwA0ZhTVl-WHEslQ54RS5Ruhv3AKq6va6cEnHPX6RiTH5Rm2PjYc9SwIvfKZ0oPCu2A82NzoLrRcaY7UWIfTuM1Df-Em5CEj5ke8HQlaR8RDxsgBrnURgVbQirmPtBWxo2V8OPHkqbXwaIx"/>
+<span class="absolute bottom-2 right-2 bg-black/80 text-white text-[11px] font-bold px-1.5 py-0.5 rounded">05:40</span>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl opacity-80" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="flex-shrink-0 w-9 h-9 rounded-full overflow-hidden mt-1">
+<img class="w-full h-full object-cover" data-alt="Small round avatar of a creative director, close-up, neutral lighting, looking directly at the camera. Professional and clean corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeucR0939Y8eoYpU8ZtZazBhgxgHIv2fgabn3QRTrXC8WMql6Dk0_Go4v1GNAOuSdJ2xZHyFCJ-GXcE9nMFwo2qso5YyVmzl984vxKlzyzizPRqjAR77lPe4av31i2WICR8PLXDOpC4qf9_qGcskpbRWdTP2lsut2r75W_wlYMFvjT6A7IGEFG4mKECZhtNUmp4VSzpG62jR69PnSqEx8rsa5VTrf0L8WLQ51y5H-ARmll8_hc2TXvGa94kjiGCYldBlvj7-KOfo3B"/>
+</div>
+<div class="flex-grow">
+<h3 class="text-on-surface font-semibold text-body-md line-clamp-2 leading-tight mb-1 group-hover:text-primary transition-colors">CryptoCore: Web3 Analytics &amp; Real-time Trading</h3>
+<p class="text-on-surface-variant text-body-sm mb-0.5">Streamfolio OpenSource</p>
+<div class="flex items-center text-on-surface-variant text-body-sm">
+<span>8.2k views</span>
+<span class="mx-1">•</span>
+<span>1 month ago</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Video Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative video-aspect rounded-xl overflow-hidden bg-surface-container-low mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Thumbnail for a smart home application interface. A cozy, high-end living room at twilight is shown, with subtle UI overlays controlling the smart lights and temperature. The lighting is warm and cinematic, featuring red accent lamps that match the brand. Professional lifestyle technology photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqrZeLniagy-FYp2oPa4gwbushbNyDYlRE2k4-g3WiZpuU9FS3c5EqHJgMGTB2REacZB1pD9h_7Z3gczq_LDnWedVrP5EAjZXns5tUMeQBJeupudVfFTo4OPbRnmVo0wwDGA1X4W4YWIPx1qW2pOKOf8gdlJbejG_NHtkNrt5gMC96qt5tJnZflYulba0PEgfrKv7eqmqlhdHJ7n1gd2CI307mppd83smnu44oZamhUlgs1NJ-yBmE3Wy4ywaS1ixBSgxmbvJuuYWz"/>
+<span class="absolute bottom-2 right-2 bg-black/80 text-white text-[11px] font-bold px-1.5 py-0.5 rounded">18:22</span>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl opacity-80" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="flex-shrink-0 w-9 h-9 rounded-full overflow-hidden mt-1">
+<img class="w-full h-full object-cover" data-alt="Small round avatar of a creative director, close-up, neutral lighting, looking directly at the camera. Professional and clean corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAviuiTvHt0Lamn4jWgQ0iog_JDbFNeySQ8EpuhVJDl1abnOK5UsTz877onWzMcd8jnyH3hTj-eMC7E6PzUVbJCUuyHtY97wl9wA2z_wRSlQDXJDMak8WHMJwlbCVFHGjk19d_R2Rvsr0bFefM6kTq2it5KjqLqJXXARtiDzWF-IzvewqIaOmQuAIf6lwBdYEE-_-s-Hg_FIr03Abp2sGjCzwVQ6kKSfSQl9oj9QJu0h-R2C23hmYAlt8GrG7H_BH63MUbcn0_xeqrv"/>
+</div>
+<div class="flex-grow">
+<h3 class="text-on-surface font-semibold text-body-md line-clamp-2 leading-tight mb-1 group-hover:text-primary transition-colors">Lumina: IoT Smart Home Integration for Enterprises</h3>
+<p class="text-on-surface-variant text-body-sm mb-0.5">Streamfolio Studio</p>
+<div class="flex items-center text-on-surface-variant text-body-sm">
+<span>156k views</span>
+<span class="mx-1">•</span>
+<span>6 months ago</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Video Card 4 -->
+<div class="group cursor-pointer">
+<div class="relative video-aspect rounded-xl overflow-hidden bg-surface-container-low mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A cinematic thumbnail for a developer documentation portal. The image features a macro shot of mechanical keyboard switches glowing with deep red backlighting, with a blurred code editor in the background. Clean, modern typography and a sense of focused productivity. Cinematic dark mode style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHPZwmEinPX5yopLGeloCr9bNYJEqQp_ZJd_q--C6yhg5V4zR7hSYejn6qv15Kfk7YMsL96criZXaFquwOKMXNUofLJ5WPb1C2qSZy4ou9s4-EPYKGQIld89dRbkLecX22oH8jwecp8AvvctJqeCip8sxGnuTse3ev6RmiUXxe_-8UuCrQEcAGGJ9T9FZ7gbwd2TJqAfVr3dhZf9MkRZkDh2qLp4p1jawZg6C-j4MoFXdE33Dhp3WXIYOjpT6d6hhT4ysL58BdC1F6"/>
+<span class="absolute bottom-2 right-2 bg-black/80 text-white text-[11px] font-bold px-1.5 py-0.5 rounded">07:55</span>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl opacity-80" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="flex-shrink-0 w-9 h-9 rounded-full overflow-hidden mt-1">
+<img class="w-full h-full object-cover" data-alt="Small round avatar of a creative director, close-up, neutral lighting, looking directly at the camera. Professional and clean corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJujKaa9E5qsb5e-A9VlMBetF7vqWbSLSj4xt2GrT0PXAwar-YKm9_kdSf_ENH-JwG5AMDPJh4d6xtVnRr5LpqOD6h1V8JiUzb00lyzycLIOcXRLYEpPXcWBwZ05ww0SQjXP-B1XmqfvHYP1gdY20gur7D_AiIx7EQxIr1QJGi4JVDK07jpmmhtjz-TyT592LhBJzOxHR2cdMOYed_yBIr9tkAQtfBcSJFqAh5ZorshWDjgGvBK2IN9i6WsK98it0xD8xxqPhuMHUs"/>
+</div>
+<div class="flex-grow">
+<h3 class="text-on-surface font-semibold text-body-md line-clamp-2 leading-tight mb-1 group-hover:text-primary transition-colors">DocuStream: Interactive Documentation for Modern Teams</h3>
+<p class="text-on-surface-variant text-body-sm mb-0.5">Streamfolio OpenSource</p>
+<div class="flex items-center text-on-surface-variant text-body-sm">
+<span>3.1k views</span>
+<span class="mx-1">•</span>
+<span>3 days ago</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- "Trending" Section for visual variety -->
+<section class="mb-12 border-t border-outline-variant/20 pt-10">
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">local_fire_department</span>
+                    Trending in Development
+                </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-low rounded-2xl p-6 flex flex-col md:flex-row gap-6 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="w-full md:w-48 h-28 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Abstract 3D representation of an API mesh. Glowing red nodes connected by thin white lines in a dark, foggy space. Low-key lighting, professional cinematic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV0UywC6LyBwwy2sA_8MSxx_UexWSCM4QYqpjbkYEJEuuQR5quO3YPc0tpUDIsRiOYNfmAPemHpn6Qg-zSQ6bbJe3dV2J73Ke9nb9IkjEuJ5rCYBmYrbcn8xBo0ZVepaFX39wJ7vY8rXtBUlwMsIsoPdvQnVkKSP_-mVNIOqbE_IkPwbZOC17R3BjnSHHnE12STqxAoBo0aGHKtetwAVOaoM4Me_8o8pPk5QGLcNIuidZ3rUALNgpp1hiWW3zc21AXcqcoU7ALKJKR"/>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="text-headline-lg text-on-surface mb-2">OmniAPI: Universal Data Gateway</h3>
+<p class="text-body-sm text-on-surface-variant line-clamp-2">Standardizing the way we connect legacy enterprise systems with modern edge-computing nodes.</p>
+<div class="mt-4 flex items-center gap-3">
+<div class="bg-primary-container/20 text-primary px-2 py-0.5 rounded text-[10px] font-bold uppercase">Hot</div>
+<span class="text-on-surface-variant text-body-sm">4.5k stars on GitHub</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-6 flex flex-col md:flex-row gap-6 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="w-full md:w-48 h-28 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Modern smartphone showing a fitness app interface with dark mode and vibrant red accents. The background is a clean, minimal gym setting with soft bokeh lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZckUD-Vx-0WU1beLkhiD0ME1xtbM5aX-odo0yLoD60C2hc9EL7ZgS0Jys_pcr_dsC2pi0wXjD-cGXZKuDt70BpSwia67qWg5l8hgpQdNZ7roj9NOCQD2DgKa9q2G54tr_oVWl6zfbfOMxm2pV_GhcY2Qtw3me9LOCtZHYuB5z2dD_WyL_0FQGXzlCevJpkCwEIZdIFjLInC9iN-uTfTtf8-LvBD9uW3iLBB2ajGwZ9QX6pWgTLiVu3MZbcqiLjyNznuF6UAAToshH"/>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="text-headline-lg text-on-surface mb-2">PulseFit: Cross-Platform Bio-Tracking</h3>
+<p class="text-body-sm text-on-surface-variant line-clamp-2">A React Native mobile application utilizing sensor fusion for high-precision athlete performance monitoring.</p>
+<div class="mt-4 flex items-center gap-3">
+<div class="bg-primary-container/20 text-primary px-2 py-0.5 rounded text-[10px] font-bold uppercase">Trending</div>
+<span class="text-on-surface-variant text-body-sm">12 Awards</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Mobile Bottom NavBar (Hidden on Desktop) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full h-16 bg-background flex justify-around items-center z-50 px-2 shadow-2xl">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-medium">Explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">subscriptions</span>
+<span class="text-[10px] font-medium">Projects</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+<!-- Contextual FAB (Only on Home) -->
+<button class="fixed bottom-20 right-6 md:bottom-8 md:right-8 w-14 h-14 bg-primary-container text-on-primary-container rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform active:scale-95 z-40">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<script>
+        // Micro-interaction for hover effects and active states
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                // In a real app, this would handle routing
+                // For demo, we just prevent default and show a ripple effect
+                if (link.getAttribute('href') === '#') e.preventDefault();
+            });
+        });
+
+        // Simple scroll listener to change header appearance
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('bg-opacity-95', 'backdrop-blur-md');
+            } else {
+                header.classList.remove('bg-opacity-95', 'backdrop-blur-md');
+            }
+        });
+    </script>
+</body></html>
