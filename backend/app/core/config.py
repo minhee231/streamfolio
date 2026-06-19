@@ -1,3 +1,6 @@
+import json
+from typing import Any
+from pydantic import field_validator
 from pydantic_settings import BaseSettings
 
 
@@ -8,7 +11,22 @@ class Settings(BaseSettings):
     access_token_expire_minutes: int = 60 * 24
     admin_username: str = "admin"
     admin_password: str = "streamfolio2024"
-    cors_origins: list[str] = ["http://localhost:5173"]
+    # Any type prevents pydantic-settings from JSON-parsing the raw env string
+    cors_origins: Any = ["http://localhost:5173"]
+
+    @field_validator("cors_origins", mode="before")
+    @classmethod
+    def parse_cors(cls, v: Any) -> list[str]:
+        if isinstance(v, list):
+            return v
+        if isinstance(v, str):
+            v = v.strip()
+            try:
+                parsed = json.loads(v)
+                return parsed if isinstance(parsed, list) else [str(parsed)]
+            except json.JSONDecodeError:
+                return [s.strip() for s in v.split(",") if s.strip()]
+        return v
 
     model_config = {"env_file": ".env"}
 
