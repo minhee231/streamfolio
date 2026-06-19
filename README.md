@@ -1,6 +1,6 @@
-# Streamfolio
+# 김이삭 (Isaac Kim) — AI Engineer Portfolio
 
-> Cinematic Stream 다크 테마 포트폴리오 CMS — React + FastAPI + PostgreSQL
+> 5년차 AI 엔지니어 김이삭의 포트폴리오 — LLM / RAG / MLOps 프로젝트 모음
 
 ---
 
@@ -8,20 +8,28 @@
 
 | | URL |
 |---|---|
-| **프론트엔드** | [https://frontend-vert-two-46.vercel.app](https://frontend-vert-two-46.vercel.app) |
+| **포트폴리오** | [https://frontend-vert-two-46.vercel.app](https://frontend-vert-two-46.vercel.app) |
 | **API (백엔드)** | [https://backend-production-fcdc.up.railway.app](https://backend-production-fcdc.up.railway.app) |
 | **API 문서** | [https://backend-production-fcdc.up.railway.app/docs](https://backend-production-fcdc.up.railway.app/docs) |
 
 ---
 
-## 프로젝트 소개
+## 소개
 
-Google Stitch로 설계한 "Cinematic Stream" 다크 테마를 직접 구현한 풀스택 포트폴리오 웹앱입니다.  
-유튜브 스타일의 프로젝트 그리드, 어드민 CMS 대시보드, JWT 인증을 포함합니다.
+LLM 기반 프로덕션 서비스의 전 주기를 경험한 AI 엔지니어입니다.  
+RAG 파이프라인, vLLM 서빙 최적화, MLOps 자동화, FastAPI 백엔드 개발을 주력으로 합니다.
 
-- **홈**: 프로젝트 카드 그리드 (유튜브 스타일)
+- **이메일**: isaac.kim.ai@gmail.com
+- **GitHub**: [github.com/isaac-kim-ai](https://github.com/isaac-kim-ai)
+- **Blog**: [isaac-ai.dev](https://isaac-ai.dev)
+
+---
+
+## 포트폴리오 구성
+
+- **홈**: 프로젝트 카드 그리드 (LLM/RAG/MLOps 프로젝트 6선)
 - **Explore**: 카테고리 필터 + 검색
-- **About**: 프로필 · 스킬 · 경력
+- **About**: 프로필 · 스킬 · 경력 · 학력 · 자격증
 - **Admin**: 프로젝트 CRUD CMS (로그인 필요)
 
 ---
